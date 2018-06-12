@@ -1,4 +1,10 @@
+body {
+  background: black;
+  font-family: 'Work Sans', sans-serif;
+}
+
 h1 {
-  font-family: sans-serif;
-  color: gray;
+  font-weight: 300;
+  color: white;
+  line-height:1.25;
 }
