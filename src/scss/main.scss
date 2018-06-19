@@ -43,19 +43,25 @@ a:hover {
 
 .button-wrap {
     background: #292929;
+    &-inner {
+      transform: translateY(-75px);
+    }
 }
 
 
 .tilt-button {
-  background-color: #FEE140;
-  background-image: linear-gradient(45deg, #FEE140 0%, #FA709A 100%);
-
+  background-color: #FFFFFF;
+  background-image: linear-gradient(45deg, #dcdcdc 0%, #ffffff 100%);
   padding: 2rem 3rem;
   border-radius: 1rem;
   color: white;
   font-weight: 700;
-
+  font-size: 2rem;
+  transform-style: preserve-3d;
   &:hover {
     color: black;
+  }
+  &-content {
+    transform: translateZ(20px)
   }
 }
