@@ -1,0 +1,119 @@
+body {
+  background: black;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-weight: 300;
+  color: white;
+  line-height:1.25;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: inline;
+    padding-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color:gray;
+    transition: .2s all;
+}
+ 
+a:hover {
+    color: white;
+}
+
+/* .contact {
+    font-size:2rem;
+    transition: .2s ease-in-out;
+}
+.contact:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background:rgba(255,255,255,.125);
+    content: "";
+    transition: .2s ease-in-out;
+    z-index: -99;
+}
+.contact:hover {
+    font-size: 2.25rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .contact {font-size: 1.5rem;}
+    .contact:hover {font-size: 1.5rem !Important;}
+}
+
+.contact:hover:after {
+    height: 100%;
+    width: 100%;
+} */
+
+
+/* Fancy Button */
+
+
+.button-wrap {
+    background: #292929;
+}
+
+.fancy-button {
+	position: relative;
+	display: inline-block;
+	padding: 1.2em 2em;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	color: white;
+}
+
+.fancy-button::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: linear-gradient(135deg, #6e8efb, #a777e3);
+		border-radius: 4px;
+		transition: box-shadow .5s ease, transform .2s ease; 
+		will-change: transform;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+		transform:
+			translateY(var(--ty, 0))
+			rotateX(var(--rx, 0))
+			rotateY(var(--ry, 0))
+			translateZ(var(--tz, -12px));
+	}
+
+    .fancy-button:hover::before {
+		box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+	}
+
+    .fancy-button::after {
+		position: relative;
+		display: inline-block;
+		content: attr(data-title);
+		transition: transform .2s ease; 
+		font-weight: bold;
+		letter-spacing: .01em;
+		will-change: transform;
+		transform:
+			translateY(var(--ty, 0))
+			rotateX(var(--rx, 0))
+			rotateY(var(--ry, 0));
+	}
