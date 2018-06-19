@@ -1,6 +1,6 @@
 body {
   background: black;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -8,30 +8,30 @@ h1 {
   font-weight: 300;
   color: white;
   line-height:1.25;
+  font-weight: 200;
 }
 
 ul {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 1px;
-    display: inline;
-    padding-right: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  display: inline;
+  padding-right: 10px;
 }
 
 a {
-    text-decoration: none;
-    color:gray;
-    transition: .2s all;
-}
- 
-a:hover {
+  text-decoration: none;
+  color:gray;
+  transition: .2s all;
+  &:hover {
     color: white;
+  }
 }
 
 .view {
