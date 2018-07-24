@@ -1,9 +1,83 @@
 @import '_type.scss';
+@import '_util.scss';
 
 body {
   font-family: 'IBM Plex Mono', monospace;
   -webkit-font-smoothing: antialiased;
 }
+
+.view {
+  background: #FAFAFC;
+}
+
+.sidebar li {
+  background: #ffffff;
+  padding: .5rem 1rem;
+  margin: 1rem 0;
+  color: #4e4e4e;
+  border-radius: 8px;
+  border: 1px solid #FCFCFC;
+  box-shadow: 0 4px 12px -2px rgba(#6B75A1, .16);
+}
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.contact {
+  color: $c-darkGray;
+  text-decoration: none;
+  transition: .2s;
+  font-size: .75rem;
+
+  &:before {
+     font-family: "Font Awesome 5 Free";
+     position: absolute;
+     content: "\f152";
+     left: -35px;
+     transition: .2s all;
+     opacity: 0;
+     background-color: #08AEEA;
+     background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+  }
+  &:hover {
+     color: black;
+     &:before {
+        position: absolute;
+        left: -25px;
+        opacity: 1;
+     }
+  }
+}
+
+button {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 900;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -2px rgba(107,117,161,0.5);
+  transition: .2s all;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px -4px rgba(107,117,161,0.45);
+  }
+}
+
+.hire {
+  background-color: #ff653b;
+  background-image: linear-gradient(45deg, #ff653b 0%, #ff255a 74%);
+  color: white;
+}
+
+
 
 .dark {
 
