@@ -1,0 +1,167 @@
+//variables
+$ease: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$font: 'Montserrat', sans-serif;
+
+//general
+body {
+  font-family: $font;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+.contact {
+  li {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    display: inline;
+    padding-right: 10px;
+  }
+}
+
+section {
+  animation-duration: 3s;
+}
+
+
+// additional type styles
+.h1 {
+  color: black;
+  &-link {   
+      text-decoration: none;
+      color:gray;
+      transition: .2s all;
+      &:hover {
+        color: black; 
+    }
+  }
+} 
+
+
+// portfolio blocks
+.elements {
+  a {
+    transition: $ease;
+    text-decoration: none;
+    &:hover {
+      transform: scale(.9);
+
+      .overlay {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.element {
+   color: #000;
+   transition: .2s all;
+  //  height: 417px;
+   
+  //  @media (min-width: 960px) and (max-width: 1225px) {
+  //   height: 300px;
+  // }
+  //  @media (max-width: 480px) {
+  //    height: 250px;
+  //  }
+  //  @media (max-width: 320px) {
+  //   height: 175px;
+  // }
+  h3, p {
+    color: white;
+  }
+  .text {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: $ease;
+    background-color: #000000;
+    border-radius: .5rem;
+  }
+  img {
+    border-radius: .5rem;
+  }
+}
+
+// navigation
+nav {
+  a {
+    text-decoration: none;
+    color: black;
+    opacity: .5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  a.active {
+    position: relative;
+    opacity: 1;
+    &:after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background: red;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+    }
+  }
+}
+
+
+
+// footer
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  a {
+    text-decoration: none;
+    color: red;
+  }
+}
+
+// about 
+
+.about {
+  .headshot {
+
+    @media (max-width: 480px) {
+        height: 175px;
+      }
+
+   &-inner {
+    background: url("../../images/headshot_thats-no-moon.jpg");
+    height: 620px;
+    background-size: cover;
+    background-position: top center;
+  }
+  }
+}
+
+h2 a {
+  text-decoration: none;
+      color:gray;
+      transition: .2s all;
+      &:hover {
+        color: black; 
+    }
+}

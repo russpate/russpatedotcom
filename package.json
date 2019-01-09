@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "clipboard": "^2.0.4",
     "postcss-cli": "^5.0.1",
     "tachyons": "^4.10.0",
     "tilt": "^0.2.0",

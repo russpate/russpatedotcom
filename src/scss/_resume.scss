@@ -1,15 +1,15 @@
-.view {
-  background: #FAFAFC;
+body {
+  background: #fafafc;
 }
 
 .sidebar li {
-  background: #ffffff;
+  background: #f3f3f3;
   padding: .5rem 1rem;
   margin: 1rem 0;
   color: #4e4e4e;
   border-radius: 8px;
   border: 1px solid #FCFCFC;
-  box-shadow: 0 4px 12px -2px rgba(#6B75A1, .16);
+  // box-shadow: 0 4px 12px -2px rgba(#6B75A1, .16);
 }
 
 .icon::before {
@@ -35,7 +35,7 @@
      opacity: 0;
      background-color: #08AEEA;
      background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
-     -webkit-background-clip: text;
+    //  -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
   }
   &:hover {
