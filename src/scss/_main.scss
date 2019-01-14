@@ -55,7 +55,9 @@ section {
     text-decoration: none;
     &:hover {
       transform: scale(.9);
-
+      @media (min-width: 320px) and (max-width: 480px) {
+        transform: scale(1);
+      }
       .overlay {
         opacity: 1;
       }
@@ -66,8 +68,17 @@ section {
 .element {
   color: #000;
   transition: .2s all;
+  h3 {
+    @media (min-width: 320px) and (max-width: 480px) {
+      font-size: 1.25rem !important;
+    }
+  }
   h3, p {
     color: white;
+    @media (min-width: 320px) and (max-width: 480px) {
+      margin: 0;
+      padding: 0;
+    }
   }
   &-wrap {
     transition: $ease;
@@ -75,7 +86,9 @@ section {
     cursor: pointer;
     &:hover {
       transform: scale(.9);
-
+      @media (min-width: 320px) and (max-width: 480px) {
+        transform: scale(1);
+      }
       .overlay {
         opacity: 1;
       }
@@ -87,6 +100,12 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     top: 50%;
+    @media (min-width: 320px) and (max-width: 480px) {
+      position: absolute;
+      text-align: left;
+      left: 10px;
+      transform: translateY(-50%);
+    }
   }
 
   .overlay {
@@ -100,6 +119,11 @@ section {
     opacity: 0;
     transition: $ease;
     background-color: #000000;
+    @media (min-width: 320px) and (max-width: 480px) {
+      top: unset;
+      opacity: 1;
+      height: 25%;
+    }
   }
 }
 
