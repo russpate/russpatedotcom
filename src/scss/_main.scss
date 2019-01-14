@@ -69,7 +69,18 @@ section {
   h3, p {
     color: white;
   }
+  &-wrap {
+    transition: $ease;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      transform: scale(.9);
 
+      .overlay {
+        opacity: 1;
+      }
+    }
+  }
   .text {
     position: absolute;
     text-align: center;
