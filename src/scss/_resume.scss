@@ -1,15 +1,11 @@
-body {
-  background: #fafafc;
-}
+// resume style
 
 .sidebar li {
-  background: #f3f3f3;
+  background: #151515;
   padding: .5rem 1rem;
   margin: 1rem 0;
-  color: #4e4e4e;
+  color: #9e9e9e;
   border-radius: 8px;
-  border: 1px solid #FCFCFC;
-  // box-shadow: 0 4px 12px -2px rgba(#6B75A1, .16);
 }
 
 .icon::before {
@@ -21,7 +17,7 @@ body {
 }
 
 .contact {
-  color: $c-darkGray;
+  color: #9e9e9e;
   text-decoration: none;
   transition: .2s;
   font-size: .75rem;
@@ -29,17 +25,17 @@ body {
   &:before {
      font-family: "Font Awesome 5 Free";
      position: absolute;
-     content: "\f152";
+     content: "\f086";
      left: -35px;
      transition: .2s all;
      opacity: 0;
      background-color: #08AEEA;
-     background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
-    //  -webkit-background-clip: text;
+     background-image: linear-gradient(45deg, #ff653b 0%, #ff255a 74%);
+     -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
   }
   &:hover {
-     color: black;
+     color: white;
      &:before {
         position: absolute;
         left: -25px;

@@ -1,6 +1,8 @@
 //variables
 $ease: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-$font: 'Montserrat', sans-serif;
+// $font: 'Montserrat', sans-serif;
+$font-secondary: 'usual', sans-serif;
+$font-primary: 'cooper-black-std', serif;
 
 // $media-query
 //  @media (min-width: 960px) and (max-width: 1225px) {
@@ -9,9 +11,12 @@ $font: 'Montserrat', sans-serif;
 
 //general
 body {
-  font-family: $font;
+  font-family: $font-secondary;
   -webkit-font-smoothing: antialiased;
   position: relative;
+  color: white;
+  background: #000;
+
 }
 
 ul {
@@ -35,14 +40,45 @@ section {
 
 
 // additional type styles
-.h1 {
-  color: black;
+.heading {
+  font-weight: 500;
+  font-size: 2.25rem;
+
+  &-fancy {
+    @extend .heading;
+    font-family: $font-primary;
+    font-size: 4rem;
+
+    @media (min-width: 481px) and (max-width: 720px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      font-size: 2rem;
+    }
+  }
+
+  &-schmancy {
+    @extend .heading;
+    font-family: $font-primary;
+    font-size: 2.75rem;
+  }
+
+  &-small {
+    @extend .heading;
+
+    font-size: 2.75rem;
+  }
+
   &-link {   
       text-decoration: none;
-      color:gray;
       transition: .2s all;
+      background-image: linear-gradient(45deg, #ff653b 0%, #ff255a 74%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       &:hover {
-        color: black; 
+        background-image: linear-gradient(45deg, gray 0%, gray 74%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
   }
 } 
@@ -118,7 +154,7 @@ section {
     width: 100%;
     opacity: 0;
     transition: $ease;
-    background-color: #000000;
+    background-color: #151515;
     @media (min-width: 320px) and (max-width: 480px) {
       top: unset;
       opacity: 1;
@@ -131,7 +167,7 @@ section {
 nav {
   a {
     text-decoration: none;
-    color: black;
+    color: white;
     opacity: .5;
     &:hover {
       opacity: 1;
@@ -144,7 +180,7 @@ nav {
       content: '';
       height: 2px;
       width: 100%;
-      background: red;
+      background: white;
       position: absolute;
       left: 0;
       bottom: -5px;
@@ -152,13 +188,16 @@ nav {
   }
 }
 
+.view {
+  &-about {
+    min-height: 720px;
+  }
+}
+
 
 
 // footer
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
 
   a {
     text-decoration: none;
@@ -167,7 +206,6 @@ footer {
 }
 
 // about 
-
 .about {
   .headshot {
 
@@ -175,11 +213,11 @@ footer {
         height: 355px;
       }
     @media (min-width: 481px) and (max-width: 720px) {
-        margin-top: 12rem;
+        // margin-top: 12rem;
         height: 460px;
     }
     @media (min-width: 721px) and (max-width: 960px) {
-      margin-top: 13rem;
+      // margin-top: 13rem;
       height: 580px;
   }
 
