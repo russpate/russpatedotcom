@@ -244,11 +244,16 @@ h2 a {
 // randomizer
 .letter {
   animation: fonty .2s linear alternate;
+  line-height: 1;
 }
 
 @keyframes fonty { 
-  0% { font-family: $font-primary; }
+  0% { 
+    font-family: $font-primary; 
+    -webkit-filter: hue-rotate(0deg);}
   50% { font-family: $font-secondary; }
   75% { font-family: $hobeaux; color: red;}
-  100% { font-family: $sabbath;}
+  100% { 
+    font-family: $sabbath; 
+    -webkit-filter: hue-rotate(360deg);}
 }
