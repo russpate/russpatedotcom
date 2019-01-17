@@ -1,8 +1,8 @@
 //variables
 $ease: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-// $font: 'Montserrat', sans-serif;
 $font-secondary: 'usual', sans-serif;
 $font-primary: 'cooper-black-std', serif;
+$eskapade: 'eskapade', serif;
 
 // $media-query
 //  @media (min-width: 960px) and (max-width: 1225px) {
@@ -237,4 +237,15 @@ h2 a {
       &:hover {
         color: black; 
     }
+}
+
+// randomizer
+.letter {
+  animation: fonty .2s linear alternate;
+}
+
+@keyframes fonty { 
+  0% { font-family: $font-primary; }
+  50% { font-family: $font-secondary; }
+  100% { font-family: $eskapade; color: red;}
 }
