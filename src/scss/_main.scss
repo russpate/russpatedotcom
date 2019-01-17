@@ -250,10 +250,10 @@ h2 a {
 @keyframes fonty { 
   0% { 
     font-family: $font-primary; 
-    -webkit-filter: hue-rotate(0deg);}
+    -webkit-filter: blur(0px);}
   50% { font-family: $font-secondary; }
-  75% { font-family: $hobeaux; color: red;}
+  75% { font-family: $hobeaux; color: pink;}
   100% { 
     font-family: $sabbath; 
-    -webkit-filter: hue-rotate(360deg);}
+    -webkit-filter: blur(5px);}
 }
