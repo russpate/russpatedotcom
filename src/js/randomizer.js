@@ -19,5 +19,5 @@ function getRandomDec(min, max) {
 
 // assigns random integer to the css property for each span
 $('.letter').each(function () {
-  $(this).css({ 'animationIterationCount': getRandomInt(1, 5), 'animationDuration': getRandomDec(0, 1) + 's' });
+  $(this).css({ 'animationIterationCount': getRandomInt(0, 2), 'animationDuration': getRandomDec(0, 1) + 's' });
 });
