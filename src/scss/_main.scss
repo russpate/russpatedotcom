@@ -253,10 +253,12 @@ h2 a {
 @keyframes fonty { 
   0% { 
     font-family: $font-primary; 
-    -webkit-filter: blur(0px);}
+    // -webkit-filter: blur(0px);}
+  }
   50% { font-family: $font-secondary; }
   75% { font-family: $hobeaux; color: pink;}
   100% { 
     font-family: $sabbath; 
-    -webkit-filter: blur(5px);}
+    // -webkit-filter: blur(5px);}
+  }
 }
