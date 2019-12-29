@@ -58,7 +58,8 @@ h1.big {
 
 @media (min-width: 375px) and (max-width: 960px) {
   .heading-1{
-   font-size: 3.25rem;
+   font-size: 4.25rem;
+   word-break: break-all;
   }
 }
 
