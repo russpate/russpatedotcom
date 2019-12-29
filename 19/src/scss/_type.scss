@@ -1,0 +1,43 @@
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-weight: 500;
+}
+
+// h1 {
+//   font-weight: 300;
+// }
+h2 {
+  font-size: 1.6rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1.05rem;
+}
+h6 {
+  font-size: .9rem;
+}
+p {
+  font-size: .8rem;
+  &.small {
+    font-size: .7rem;
+  }
+}
+li {
+  @extend p
+}
+
+.heading {
+  font-weight: 600;
+  &-small {
+    font-weight: 600;
+  }
+}

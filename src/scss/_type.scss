@@ -4,12 +4,14 @@ h3,
 h4, 
 h5, 
 h6 {
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
-// h1 {
-//   font-weight: 300;
-// }
+h1 {
+  font-size: 5rem;
+  line-height: 1.4;
+}
 h2 {
   font-size: 1.6rem;
 }
@@ -23,7 +25,7 @@ h5 {
   font-size: 1.05rem;
 }
 h6 {
-  font-size: .9rem;
+  font-size: .7rem;
 }
 p {
   font-size: .8rem;
@@ -35,9 +37,17 @@ li {
   @extend p
 }
 
-.heading {
-  font-weight: 600;
-  &-small {
-    font-weight: 600;
-  }
+.strong {
+  font-weight: 500;
+}
+
+h1.big {
+  font-size: 7rem;
+}
+
+// $media-query
+ @media (min-width: 375px) and (max-width: 960px) {
+   h1.big{
+    font-size: 5rem;
+   }
 }

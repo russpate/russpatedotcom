@@ -1,28 +1,35 @@
 'use strict'
 
+// custom cursor - https://stackoverflow.com/questions/51281666/animate-custom-cursor-when-hovering-on-a-link
 
-// $("nav a").on("click", function (event) {
+$(document).mousemove(function(e) {
 
-//   event.preventDefault()
+    const target = $(event.target);
 
-//   const href = $(this).attr("href")
+    // const cursor = document.querySelector('.cursor');
+    const cursor = $('.cursor');
 
-//   window.history.pushState(null, null, href)
+    // update position of cursor
+    cursor.css('left', e.pageX-10).css('top', e.pageY-10);
+    
+    // set link and hovered cursor
+    const isLinkTag = target.is('a');
+    const isHovered = cursor.hasClass('hoveredCursor');
+    
+    // toggle the cursor class if necessary 
+    if(isLinkTag && !isHovered) {
+      cursor.addClass('hoveredCursor');
+    } else if(!isLinkTag && isHovered) {
+      cursor.removeClass('hoveredCursor');
+    }
+  });
+  
+//   $(document).mouseleave(function(e) {
+//     const cursor = $('.cursor');
+//     cursor.hide()
+//   });
 
-//   $("nav a").removeClass("active")
-//   $(this).addClass("active")
-
-//   $.ajax({
-//     url: href,
-//     success: function (data) {
-//       $("section").fadeOut(250, function () {
-//         const newPage = $(data).filter("section").html()
-
-//         $("section").html(newPage)
-
-//         // $("section").fadeIn(250)
-//       })
-//     }
-//   })
-
-// })
+//   $(document).mouseenter(function(e) {
+//     const cursor = $('.cursor');
+//     cursor.show()
+//   });
