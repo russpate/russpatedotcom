@@ -9,7 +9,7 @@ $(document).mousemove(function(e) {
     // const cursor = document.querySelector('.cursor');
     const cursor = $('.cursor');
 
-    // update position of cursor
+    // update position of cursor -- use `page` instead of `client`
     cursor.css('left', e.pageX-10).css('top', e.pageY-10);
     
     // set link and hovered cursor
